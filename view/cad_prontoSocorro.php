@@ -3,6 +3,8 @@
     $title = "Cadastro de Atendimento no Pronto Socorro";
     include '../util/imports.php';
     include '../connect/connect.php';
+    include '../control/valida.php';
+    require_once "../control/autoload.php";
 ?>
 <html>
 <head>

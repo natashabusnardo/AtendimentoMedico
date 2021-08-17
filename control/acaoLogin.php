@@ -35,7 +35,7 @@ if ($acao == "logoff") {
 
 		if ($senha == $senhaBD) {
 			session_start();
-			$_SESSION['usuario'] = $usuario;
+			$_SESSION['nomeUsuario'] = $usuario;
 			$_SESSION['nome'] = $nome;
 			header("location:../view/cad_medico.php");
 		} else {

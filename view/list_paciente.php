@@ -3,6 +3,7 @@
     include '../connect/connect.php';
     include '../util/imports.php';
     include '../control/valida.php';
+    require_once "../control/autoload.php";
 	$title = "Lista de Pacientes";
     $procurar = '';
 	if (isset($_POST["procurar"]))

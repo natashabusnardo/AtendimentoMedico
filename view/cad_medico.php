@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php 
     $title = "Cadastro de Médicos";
+    include '../control/valida.php';
+    require_once "../control/autoload.php";
     include '../util/imports.php';
 ?>
 <html>

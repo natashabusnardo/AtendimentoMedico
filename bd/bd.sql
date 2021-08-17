@@ -82,7 +82,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `projetofinal`.`prontoSocorro` (
   `codigo` INT NOT NULL AUTO_INCREMENT,
   `hora_chegada` DATETIME NOT NULL,
-  `hora_atendimento` DATETIME NOT NULL,
+  `hora_atendimento` DATETIME,
   `medico_crm` VARCHAR(45) NOT NULL,
   `paciente_cpf` VARCHAR(45) NOT NULL,
   `gravidade` VARCHAR(45) NOT NULL,
@@ -101,6 +101,14 @@ CREATE TABLE IF NOT EXISTS `projetofinal`.`prontoSocorro` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+
+INSERT INTO `projetofinal`.`usuario` (`nomeUsuario`, `senhaUsuario`, `tipoUsuario`) VALUES ('admin', 'admin', '1');
+INSERT INTO `projetofinal`.`medico` (`crm`, `nome`, `disponivel`) VALUES ('121314', 'marcos', '1');
+INSERT INTO `projetofinal`.`paciente` (`cpf`, `nome`, `telefone`, `email`) VALUES ('19', 'paciente', '1111', 'email@email.com');
+INSERT INTO `projetofinal`.`atendimento` (`horario_atendimento`, `medico_crm`, `paciente_cpf`) VALUES ('2021-08-25', '121314', '19');
+INSERT INTO `projetofinal`.`prontosocorro` (`hora_chegada`, `medico_crm`, `paciente_cpf`, `gravidade`) VALUES ('2021-08-12', '121314', '19', '4');
+INSERT INTO `projetofinal`.`prontosocorro` (`hora_chegada`, `medico_crm`, `paciente_cpf`, `gravidade`) VALUES ('2021-08-12', '121314', '19', '3');
+INSERT INTO `projetofinal`.`prontosocorro` (`hora_chegada`, `medico_crm`, `paciente_cpf`, `gravidade`) VALUES ('2021-08-12', '121314', '19', '4');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

@@ -21,7 +21,7 @@
                 <h1 class="text-black col-lg-8 col-md-11" style="margin-bottom: 50px">Login</h1>
                 <hr class="bg-black p-0 mb-2 mb-4">
                 <i class="fas fa-user"></i> <label for="login" class="text-dark">Login</label>
-                <input type="text" id="login" name="user" class="form-control bg-transparent rounded-0" placeholder="Seu Login" required autofocus>
+                <input type="text" id="login" name="user" class="form-control bg-transparent rounded-0" placeholder="Usuário" required autofocus>
                 <br>
                 <i class="fas fa-lock"></i> <label for="inputPassword" class="text-dark">Senha</label>
                 <input type="password" id="inputPassword" name="pass"class="form-control bg-transparent rounded-0" placeholder="Senha" required> 

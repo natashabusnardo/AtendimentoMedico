@@ -1,6 +1,7 @@
 <?php
 	require '../connect/Conexao.class.php';
 	require '../connect/crud.class.php';
+    include "autoload.php";
 	require 'autoload.php';
 	include '../connect/deault.inc.php';
 	include '../model/Atendimento.php';

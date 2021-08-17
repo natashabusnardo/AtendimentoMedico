@@ -21,7 +21,7 @@ function inserir(){
     $arrayUser['nome'] = $paciente->getNome();
     $arrayUser['telefone'] = $paciente->getTelefone();
     $arrayUser['email'] = $paciente->getEmail();
-	$arrayUser['gravidade'] = $paciente->getGravidade();
+	
     $retorno   = $crud->insert($arrayUser);
     header("location:../view/cad_paciente.php");
 }
@@ -35,7 +35,6 @@ function dadosForm()
     $dados['nome'] = $_POST['nome'];
     $dados['telefone'] = $_POST['telefone'];
     $dados['email'] = $_POST['email'];
-    $dados['gravidade'] = $_POST['gravidade'];
     $paciente->buildFromArray($dados);
     return $paciente;
 }

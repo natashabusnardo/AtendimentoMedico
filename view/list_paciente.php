@@ -2,6 +2,7 @@
 <?php 
     include '../connect/connect.php';
     include '../util/imports.php';
+    include '../control/valida.php';
 	$title = "Lista de Pacientes";
     $procurar = '';
 	if (isset($_POST["procurar"]))
@@ -35,7 +36,8 @@
             <th width="20"><b>CPF</b></th>
             <th width="20"><b>Nome</b></th>            
             <th width="20"><b>Telefone</b></th>
-            <th width="20"><b>Gravidade</b></th>
+            <th width="20"><b>Email</b></th>
+
             <th width="20"><b>Alterar</b></th>
             <th width="20"><b>Excluir</b></th>
 	    </tr>
@@ -55,8 +57,7 @@
             <td align="center"><?php echo $row['cpf'];?></td>
 	        <td align="center"><?php echo $row['nome']; ?></td>          
             <td align="center"><?php echo $row['telefone'];?></td>
-            <td align="center"><?php echo $row['gravidade'];?></td>            
-            
+            <td align="center"><?php echo $row['email'];?></td>          
             <td align="center"><a href="cad_paciente.php?acao=editar&cpf=<?php echo $row['cpf'];?>"><i class="fas fa-edit"></i></a></td>
             <td align="center"><a href="javascript:excluirRegistro('../control/acaoPaciente.php?acao=excluir&cpf=<?php echo $row['cpf'];?>')"><i class="fas fa-trash-alt"></i></a></td>
 	    </tr>

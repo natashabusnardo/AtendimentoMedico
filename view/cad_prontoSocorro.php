@@ -42,11 +42,22 @@
             <br>
             <label for="hora_chegada">Hora de Chegada:</label>     
             <input class="input-group mb-3" type="datetime-local" name="hora_chegada" id="hora_chegada" placeholder="Data de Chegada" required="true"><br>
-            <br><br>
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <laber for="gravidade">Gravidade: </label> 
+                    <input type="radio" id="gravidade" name="gravidade" value="1">
+                    <label for="gravidade">Estável</label> 
+                    <input type="radio" id="gravidade" name="gravidade" value="2">
+                    <label for="gravidade">Atenção</label>  
+                    <input type="radio" id="gravidade" name="gravidade" value="3">
+                    <label for="gravidade">Prioridade</label>
+                    <input type="radio" id="gravidade" name="gravidade" value="2">
+                    <label for="gravidade">Emergência</label>    
+                </div>  
+            </div>  
             <button name="acao" value="confirmar" id="acao" 
             type="submit" class="btn btn-outline-primary">Salvar</button>
             <a href="./list_prontoSocorro.php" class="btn btn-outline-primary">Consultar</a>         
-        </fieldset>
     </div>
     </form>
     <?php include '../util/msg.php'; ?>

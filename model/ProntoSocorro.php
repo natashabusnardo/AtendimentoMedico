@@ -8,6 +8,7 @@ class ProntoSocorro{
     private $paciente;
     private $horaChegada;
     private $horaAtendimento;
+    private $gravidade;
 
     public function getCodigo(){
         return $this->codigo;
@@ -45,6 +46,15 @@ class ProntoSocorro{
         $this->horaAtendimento = $horaAtendimento;
     }
 
+    public function getGravidade(){
+        return $this->gravidade;
+    }
+
+    public function setGravidade($gravidade){
+        $this->gravidade = $gravidade;
+    }
+
+
     public function buildFromObj($obj){
         $obj = (array)$obj;
         $this->buildFromArray($obj);
@@ -55,6 +65,7 @@ class ProntoSocorro{
         $this->setMedico($arr['medico_crm']);
         //$this->setHoraAtendimento($arr['hora_atendimento']);
         $this->setHoraChegada($arr['hora_chegada']);
+        $this->setGravidade($arr['gravidade']);
     }
 
 }

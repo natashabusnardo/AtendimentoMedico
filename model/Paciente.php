@@ -3,7 +3,6 @@ class Paciente{
     private $cpf;
     private $nome;
     private $telefone;
-    private $gravidade;
     private $email;
     private $proximo;
 
@@ -21,14 +20,6 @@ class Paciente{
 
     public function setNome($nome){
         $this->nome = $nome;
-    }
-
-    public function getGravidade(){
-        return $this->gravidade;
-    }
-
-    public function setGravidade($gravidade){
-        $this->gravidade = $gravidade;
     }
 
     public function getTelefone(){
@@ -64,7 +55,7 @@ class Paciente{
         $this->setCpf($arr['cpf']);
         $this->setNome($arr['nome']);
         $this->setTelefone($arr['telefone']);
-        $this->setGravidade($arr['gravidade']);
+       
         $this->setEmail($arr['email']);
     }
   

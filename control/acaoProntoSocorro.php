@@ -7,6 +7,8 @@
 
 $acao = '';
 $codigo = '';
+echo 'oi';
+
 inserir();
 
 // Métodos para cada operação
@@ -19,11 +21,14 @@ function inserir(){
     var_dump($prontoSocorro);
     // Insere os dados do usuário
     $arrayUser = array();
-    /*$arrayUser['paciente_cpf'] = '1';
-    $arrayUser['medico_crm'] = '1';*/
-    $arrayUser['hora_chegada'] = $prontoSocorro->getHoraChegada();
+
+    $arrayUser['paciente_cpf']      = $_POST['paciente_cpf'];
+    $arrayUser['medico_crm']        = $_POST['medico_crm'];
+    $arrayUser['hora_chegada']      = $_POST['hora_chegada'];
+    //$arrayUser['hora_atendimento']  = $_POST['hora_atendimento'];
+    
     $retorno   = $crud->insert($arrayUser);
-   
+    echo $retorno;
     header("location:../view/cad_prontoSocorro.php");
 }
 

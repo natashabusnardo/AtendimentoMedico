@@ -40,7 +40,7 @@
 	    </tr>
         <?php
             $sql = 'SELECT * FROM '.$tb_atendimento;
-                   ' WHERE descricao LIKE "'.$procurar.
+                   ' WHERE medico_crm LIKE "'.$procurar.
                    '%" ORDER BY descricao';
             $result = mysqli_query($conexao,$sql);
             

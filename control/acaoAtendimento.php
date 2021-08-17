@@ -14,8 +14,8 @@ inserir();
 
 if ($acao == "excluir"){
     $codigo = 0;
-    if (isset($_GET["cpf_cliente"])){
-          $codigo = $_GET["cpf_cliente"];
+    if (isset($_GET["codigo"])){
+          $codigo = $_GET["codigo"];
         excluir($codigo);
 }}
 

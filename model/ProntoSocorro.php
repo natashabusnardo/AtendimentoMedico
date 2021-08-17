@@ -42,7 +42,7 @@ class ProntoSocorro{
     }
 
     public function setHoraAtendimento($horaAtendimento){
-        $this->hora = $horaAtendimento;
+        $this->horaAtendimento = $horaAtendimento;
     }
 
     public function buildFromObj($obj){
@@ -53,7 +53,7 @@ class ProntoSocorro{
     public function buildFromArray($arr){
         $this->setPaciente($arr['paciente_cpf']);
         $this->setMedico($arr['medico_crm']);
-        $this->setHoraAtendimento($arr['hora_atendimento']);
+        //$this->setHoraAtendimento($arr['hora_atendimento']);
         $this->setHoraChegada($arr['hora_chegada']);
     }
 

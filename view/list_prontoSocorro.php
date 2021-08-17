@@ -21,14 +21,14 @@
                id="procurar" size="37" value="<?php echo $procurar;?>">
         <datalist id="prontosocorros">
         <?php 
-            $sql = 'SELECT * FROM '.$tb_prontosocorro;
+            $sql = 'SELECT * FROM '.$tb_pronto_socorro;
             $result = mysqli_query($conexao,$sql);
             while ($row = mysqli_fetch_array($result))
-                echo '<option value="'.$row['crm'].'">';
+                echo '<option value="'.$row['codigo'].'">';
         ?>
         </datalist>
         <input type="submit" name="acao" id="acao">
-        <a href="cad_prontosocorro.php">Novo Atendimento</a>
+        <a href="cad_prontoSocorro.php">Novo Pronto Socorro</a>
         <br><br>
         <table width="60%">
 	    <tr>
@@ -44,6 +44,8 @@
             $sql = 'SELECT * FROM '.$tb_pronto_socorro;
                    ' WHERE codigo LIKE "'.$procurar.
                    '%" ORDER BY codigo';
+
+        
             $result = mysqli_query($conexao,$sql);
             
             $cont = 0;

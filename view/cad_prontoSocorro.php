@@ -40,8 +40,8 @@
                         <?php } ?>
             </select>
             <br>
-            <label for="horario_atendimento">Hora de Chegada:</label>     
-            <input class="input-group mb-3" type="datetime-local" name="horario_atendimento" id="horario_atendimento" placeholder="Data de Chegada" required="true"><br>
+            <label for="hora_chegada">Hora de Chegada:</label>     
+            <input class="input-group mb-3" type="datetime-local" name="hora_chegada" id="hora_chegada" placeholder="Data de Chegada" required="true"><br>
             <br><br>
             <button name="acao" value="confirmar" id="acao" 
             type="submit" class="btn btn-outline-primary">Salvar</button>

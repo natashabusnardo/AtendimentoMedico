@@ -22,6 +22,6 @@
 	$tb_atendimento = "atendimento";
 	$tb_medico = "medico";
 	$tb_paciente = "paciente";
-	$tb_pronto_socorro = "pronto_socorro";
+	$tb_pronto_socorro = "prontosocorro";
 	
 ?>

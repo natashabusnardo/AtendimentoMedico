@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <?php 
     $title = "Cadastro de Pacientes";
-    include '../control/valida.php';
-    require_once "../control/autoload.php";
+    include '../connect/connect.php';
     include '../util/imports.php';
-
 ?>
 <html>
 <head>
@@ -24,7 +22,9 @@
             <label for="telefone">Telefone:</label>     
             <input type="number" class="input-group mb-3" name="telefone" id="telefone" placeholder="Telefone" required="true"><br>
             <label for="email">Email:</label>     
-            <input type="email" class="input-group mb-3" name="email" id="email" placeholder="Email" required="true"><br>     
+            <input type="email" class="input-group mb-3" name="email" id="email" placeholder="Email" required="true"><br>    
+            <label for="usuario">ID usuário:</label>     
+            <input type="usuario" class="input-group mb-3" name="usuario" id="usuario" placeholder="Usuario ID" required="true"><br>    
             <br><br>
             <button name="acao"  value="confirmar" id="acao" type="submit" class="btn btn-outline-primary">Salvar</button>
             <a href="./list_paciente.php" class="btn btn-outline-primary">Consultar</a>         

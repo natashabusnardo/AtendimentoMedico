@@ -1,5 +1,6 @@
 <?php
 include '../connect/connect.php';
+include '../connect/default.inc.php';
 $acao = '';
 if (isset($_GET["acao"])) {
 	$acao = $_GET["acao"];

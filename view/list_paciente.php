@@ -2,8 +2,6 @@
 <?php 
     include '../connect/connect.php';
     include '../util/imports.php';
-    include '../control/valida.php';
-    require_once "../control/autoload.php";
 	$title = "Lista de Pacientes";
     $procurar = '';
 	if (isset($_POST["procurar"]))
@@ -38,7 +36,7 @@
             <th width="20"><b>Nome</b></th>            
             <th width="20"><b>Telefone</b></th>
             <th width="20"><b>Email</b></th>
-
+            <th width="20"><b>Id</b></th>
             <th width="20"><b>Alterar</b></th>
             <th width="20"><b>Excluir</b></th>
 	    </tr>
@@ -55,12 +53,13 @@
                 echo '<tr class="sombra">';
             $cont++;
         ?>
-            <td align="center"><?php echo $row['cpf'];?></td>
-	        <td align="center"><?php echo $row['nome']; ?></td>          
-            <td align="center"><?php echo $row['telefone'];?></td>
-            <td align="center"><?php echo $row['email'];?></td>          
-            <td align="center"><a href="cad_paciente.php?acao=editar&cpf=<?php echo $row['cpf'];?>"><i class="fas fa-edit"></i></a></td>
-            <td align="center"><a href="javascript:excluirRegistro('../control/acaoPaciente.php?acao=excluir&cpf=<?php echo $row['cpf'];?>')"><i class="fas fa-trash-alt"></i></a></td>
+            <td><?php echo $row['cpf'];?></td>
+	        <td><?php echo $row['nome']; ?></td>          
+            <td><?php echo $row['telefone'];?></td>
+            <td><?php echo $row['email'];?></td>
+            <td><?php echo $row['usuario_id'];?></td>           
+            <td><a href="cad_paciente.php?acao=editar&cpf=<?php echo $row['cpf'];?>"><i class="fas fa-edit"></i></a></td>
+            <td><a href="javascript:excluirRegistro('../control/acaoPaciente.php?acao=excluir&cpf=<?php echo $row['cpf'];?>')"><i class="fas fa-trash-alt"></i></a></td>
 	    </tr>
             <?php } ?>       
         </table>

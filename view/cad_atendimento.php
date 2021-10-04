@@ -2,9 +2,6 @@
 <?php 
     $title = "Cadastro de Atendimento";
     include '../util/imports.php';
-    include '../control/valida.php';
-    require_once "../control/autoload.php";
-    include '../connect/connect.php';
 ?>
 <html>
 <head>

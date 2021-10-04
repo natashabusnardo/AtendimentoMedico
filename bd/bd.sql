@@ -117,6 +117,9 @@ CREATE TABLE IF NOT EXISTS `projetofinal`.`prontoSocorro` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `projetofinal`.`usuario` (`id`, `nomeUsuario`, `senhaUsuario`, `tipoUsuario`) VALUES ('1', 'admin', 'admin', '1'); 
+INSERT INTO `projetofinal`.`paciente` (`cpf`, `nome`, `telefone`, `email`, `usuario_id`) VALUES ('11111', 'paciente1', '456789', 'email@email.com', '1');
+INSERT INTO `projetofinal`.`medico` (`crm`, `nome`, `disponivel`, `usuario_id`) VALUES ('1234', 'medico1', '1', '1');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

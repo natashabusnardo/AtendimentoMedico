@@ -3,8 +3,6 @@
     include '../connect/connect.php';
     include '../util/imports.php';
 	$title = "Lista de Médicos";
-    include '../control/valida.php';
-    require_once "../control/autoload.php";
     $procurar = '';
 	if (isset($_POST["procurar"]))
         $procurar = $_POST["procurar"];
@@ -37,6 +35,7 @@
             <th width="20"><b>CRM</b></th>
             <th width="20"><b>Nome</b></th>            
             <th width="20"><b>Disponível</b></th>
+            <th width="20"><b>Id</b></th>
             <th width="20"><b>Alterar</b></th>
             <th width="20"><b>Excluir</b></th>
 	    </tr>
@@ -54,12 +53,12 @@
                 echo '<tr class="sombra">';
             $cont++;
         ?>
-            <td align="center"><?php echo $row['crm'];?></td>
-	        <td align="center"><?php echo $row['nome']; ?></td>          
-            <td align="center"><?php echo $row['disponivel'];?></td>            
-            
-            <td align="center"><a href="cad_medico.php?acao=editar&crm=<?php echo $row['crm'];?>"><i class="fas fa-edit"></i></a></td>
-            <td align="center"><a href="javascript:excluirRegistro('../control/acaoMedico.php?acao=excluir&crm=<?php echo $row['crm'];?>')"><i class="fas fa-trash-alt"></i></a></td>
+            <td><?php echo $row['crm'];?></td>
+	        <td><?php echo $row['nome']; ?></td>          
+            <td><?php echo $row['disponivel'];?></td>
+            <td><?php echo $row['usuario_id'];?></td>                         
+            <td><a href="cad_medico.php?acao=editar&crm=<?php echo $row['crm'];?>"><i class="fas fa-edit"></i></a></td>
+            <td><a href="javascript:excluirRegistro('../control/acaoMedico.php?acao=excluir&crm=<?php echo $row['crm'];?>')"><i class="fas fa-trash-alt"></i></a></td>
 	    </tr>
             <?php } ?>       
         </table>

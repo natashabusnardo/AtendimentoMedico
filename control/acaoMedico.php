@@ -1,8 +1,7 @@
 <?php
 	require '../connect/Conexao.class.php';
 	require '../connect/crud.class.php';
-	require 'autoload.php';
-	include '../connect/deault.inc.php';
+	include '../connect/default.inc.php';
 	include '../model/Medico.php';
 $acao = '';
 $codigo = '';
@@ -19,6 +18,7 @@ function inserir(){
     $arrayUser['crm'] = $medico->getCrm();
     $arrayUser['nome'] = $medico->getNome();
     $arrayUser['disponivel'] = $medico->getDisponivel();
+    $arrayUser['usuario_id'] = $medico->getUsuarioId();
     $retorno   = $crud->insert($arrayUser);
     header("location:../view/cad_medico.php");
 }
@@ -30,6 +30,7 @@ function dadosForm(){
     $dados['crm'] = $_POST['crm'];
     $dados['nome'] = $_POST['nome'];
     $dados['disponivel'] = $_POST['disponivel'];
+    $dados['usuario_id'] = $_POST['usuario_id'];
     $medico->buildFromArray($dados);
     return $medico;
 }

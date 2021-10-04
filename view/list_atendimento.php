@@ -2,8 +2,6 @@
 <?php 
     include '../connect/connect.php';
     include '../util/imports.php';
-    include '../control/valida.php';
-    require_once "../control/autoload.php";
 	$title = "Lista de Atendimentos";
     $procurar = '';
 	if (isset($_POST["procurar"]))
@@ -56,8 +54,7 @@
         ?>
             <td align="center"><?php echo $row['medico_crm'];?></td>
 	        <td align="center"><?php echo $row['paciente_cpf']; ?></td>          
-            <td align="center"><?php echo $row['horario_atendimento'];?></td>      
-            
+            <td align="center"><?php echo $row['horario_atendimento'];?></td>                  
             <td align="center"><a href="cad_atendimento.php?acao=editar&codigo=<?php echo $row['codigo'];?>"><i class="fas fa-edit"></i></a></td>
             <td align="center"><a href="javascript:excluirRegistro('../control/acaoAtendimento.php?acao=excluir&codigo=<?php echo $row['codigo'];?>')"><i class="fas fa-trash-alt"></i></a></td>
 	    </tr>

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <?php 
     $title = "Cadastro de Médicos";
-    include '../control/valida.php';
-    require_once "../control/autoload.php";
+    include '../connect/connect.php';
     include '../util/imports.php';
 ?>
 <html>
@@ -29,6 +28,8 @@
                 </div>  
             </div>       
             <br><br>
+        <label for="usuario">ID usuário:</label>     
+        <input type="usuario" class="input-group mb-3" name="usuario" id="usuario" placeholder="Usuario ID" required="true"><br>  
         <button name="acao"  value="confirmar" id="acao" type="submit" class="btn btn-outline-primary">Salvar</button>
         <a href="./list_medico.php" class="btn btn-outline-primary">Consultar</a>         
     </div>

@@ -27,6 +27,14 @@ class Medico{
     public function setDisponivel($disponivel){
         $this->disponivel = $disponivel;
     }
+    
+    public function getUsuarioId(){
+        return $this->usuarioId;
+    } 
+
+    public function setUsuarioId($usuarioId){
+        return $this->usuarioid->usuarioId;
+    }
 
     public function buildFromObj($obj){
         $obj = (array)$obj;
@@ -37,6 +45,7 @@ class Medico{
         $this->setNome($arr['nome']);
         $this->setCrm($arr['crm']);
         $this->setDisponivel($arr['disponivel']);
+        $this->setUsuarioId($arr['usuario']);
     }
 
 }
